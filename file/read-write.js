@@ -1,8 +1,8 @@
 const fs = require('fs');
 const file = '../internal/path.js';
 
-// console.log(_dirname);
-// console.log(_filename);
+console.log(__dirname);
+console.log(__filename);
 
 fs.readFile(file, (err, data) => {
   if (err) {

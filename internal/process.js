@@ -8,7 +8,7 @@ console.log(process.arch);
 console.log(process.title);
 console.log(process.pid);
 console.log(process.cwd());
-console.log(process.argv);
+console.table(process.argv.slice(2));
 
 process.on('exit', code => {
   console.log(`About to exit with code: ${code}`);
