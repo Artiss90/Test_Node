@@ -1,0 +1,27 @@
+const fs = require('fs');
+const file = '../internal/path.js';
+
+// console.log(_dirname);
+// console.log(_filename);
+
+fs.readFile(file, (err, data) => {
+  if (err) {
+    console.error(err.message);
+    return;
+  }
+  if (!fs.existsSync('./temp')) {
+    fs.mkdirSync('./temp');
+  }
+  //   console.log(data);
+  console.log(data.toString());
+  fs.writeFile(
+    './temp/path.js',
+    `${data.toString()} console.log ('Successfully updated')`,
+    err => {
+      if (err) {
+        console.error(err.message);
+        return;
+      }
+    },
+  );
+});

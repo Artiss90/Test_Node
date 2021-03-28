@@ -13,3 +13,4 @@ const log = msg => {
 
 exports.info = info;
 exports.log = log;
+

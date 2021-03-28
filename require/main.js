@@ -1,7 +1,7 @@
 const { info, log } = require('./module');
 const My = require('./moduleClass');
 
-globalThis.a = 5;
+global.a = 5;
 
 info('name');
 log('name');
