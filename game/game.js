@@ -51,7 +51,7 @@ const game = () => {
       }
       count += 1;
       if (a === mind) {
-        console.log('Поздравляю Вы угадали число за %d шага(ов)'.cyan, count);
+        console.log(`Поздравляю Вы угадали число за ${count} шага(ов)`.rainbow);
         log(
           `${new Date().toLocaleDateString()}: Поздравляю Вы угадали число за ${count} шага(ов)`,
         ).finally(() => rl.close());

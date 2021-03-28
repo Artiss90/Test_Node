@@ -11,5 +11,5 @@ rl.on('line', cmd => {
 
 rl.question('Как вас зовут?', answer => {
   console.log(`Приятно познакомиться ${answer}`);
-  rl.close();
+  //   rl.close();
 });
