@@ -38,6 +38,19 @@ const invokeAction = async ({ action, id, title, author }) => {
   }
 };
 
+// todo for CLI use commander
+//  e.g.:  node app -a read
+program
+  .option('-a, --action, <type>')
+  .option('-i, --id, <type>')
+  .option('-t, --title, <type>')
+  .option('-at, --author, <type>');
+
+program.parse();
+
+const options = program.opts();
+invokeAction(options);
+
 //? test command:
 // invokeAction({ action: 'read' });
 
