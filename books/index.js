@@ -9,4 +9,9 @@ const getAll = async () => {
   return JSON.parse(data);
 };
 
-module.exports = { getAll };
+const getById = async id => {
+  const books = await getAll();
+  return books.find(book => book.id === id);
+};
+
+module.exports = { getAll, getById };
