@@ -67,8 +67,11 @@ const deleteById = async id => {
   }
 
   books = books.filter(item => item.id !== id);
+  // ! or analog
+  // //[deletedBook] = books.splice(indexBook, 1);
   await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
   return 'book was deleted';
+  // //return [deletedBook];
 };
 
 module.exports = { getAll, getById, addBook, updateBookById, deleteById };
